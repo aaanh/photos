@@ -15,7 +15,7 @@ const HomePage = () => {
             Me in my natural habitat: Viet restos
           </div>
         </div>
-        <div className="flex w-2/5 flex-col items-center justify-center space-y-4">
+        <div className="flex w-2/5 flex-col justify-center space-y-4">
           <p>
             <span className="font-bold">Anh H Nguyen</span> is a photography
             addict who likes to meddle with cool new cameras and accessories. He
