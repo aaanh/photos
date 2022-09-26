@@ -1,3 +1,4 @@
+import Gallery from 'src/components/Gallery/Gallery'
 import DefaultWrapperLayout from 'src/layouts/DefaultWrapperLayout/DefaultWrapperLayout'
 
 import splash from './splash.jpg'
@@ -28,6 +29,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
+      <Gallery></Gallery>
     </DefaultWrapperLayout>
   )
 }
