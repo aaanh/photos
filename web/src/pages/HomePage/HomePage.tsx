@@ -9,11 +9,11 @@ const HomePage = () => {
       title="Home"
       description="Welcome to my photography reels."
     >
-      <div className="flex w-full justify-center space-x-4">
+      <div className="flex justify-center space-x-4 overflow-x-hidden">
         <div className="group relative">
           <img src={splash} alt="splash" className="z-0 w-96"></img>
           <div className="absolute bottom-0 left-0 z-10 p-2 text-transparent transition-all duration-200 ease-in-out group-hover:bg-neutral-900 group-hover:text-white">
-            Me in my natural habitat: Viet restos
+            Me wandering somewhere in Japan (2015)
           </div>
         </div>
         <div className="flex w-2/5 flex-col justify-center space-y-4">
