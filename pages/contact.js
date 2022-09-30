@@ -1,4 +1,4 @@
-import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout/DefaultWrapperLayout'
+import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout'
 
 const ContactPage = () => {
   return (
