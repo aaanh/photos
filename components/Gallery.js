@@ -14,7 +14,7 @@ export default function Gallery () {
         {
           data?.map((image, idx) => (
           <div className="group relative mr-2 mb-2">
-            <img src={image.url} className="w-80"></img>
+            <img key={idx} src={image.url} className="w-80"></img>
             <div className="absolute bottom-0 left-0 p-1 text-transparent transition-all duration-200 ease-in-out group-hover:bg-neutral-900 group-hover:text-white">
               {'#' + (idx + 1)}
             </div>
