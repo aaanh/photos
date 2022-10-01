@@ -1,9 +1,11 @@
-
 import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout'
+import SEO from '../components/SEO'
+
 
 const AboutPage = () => {
   return (
     <DefaultWrapperLayout>
+      <SEO title="About | Anh's Photography" description="What's going on?"></SEO>
       <div className='p-4'>
         <h1 className='text-4xl'>About This Site</h1>
         <div className='flex flex-col my-2 space-y-2'>

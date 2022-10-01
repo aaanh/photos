@@ -1,10 +1,12 @@
-import head from 'next/head'
+import Head from 'next/head'
 
-const SEO = ({ title, description }) => {
+const SEO = ({title, description}) => {
   return (
-    <>
-      <head title={title} description={description}></head>
-    </>
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:image" content="https://photos.aaanh.ca/splash.jpg" />
+    </Head>
   )
 }
 

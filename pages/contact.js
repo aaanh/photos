@@ -1,8 +1,10 @@
 import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout'
+import SEO from '../components/SEO'
 
 const ContactPage = () => {
   return (
-    <DefaultWrapperLayout title="Contact" description="Hit me up!">
+    <DefaultWrapperLayout>
+      <SEO title="Contact | Anh's Photography" description="Hit me up!"></SEO>
       <div></div>
     </DefaultWrapperLayout>
   )
