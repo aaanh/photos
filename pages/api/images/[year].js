@@ -53,8 +53,6 @@ export default async (req, res) => {
 
   const response = await getStaticProps(req.query.year)
 
-  console.log(response)
-
   const data = response.props.images.resources.map((image) => {
     return {
       url: image.secure_url,
