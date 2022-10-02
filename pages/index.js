@@ -1,15 +1,13 @@
 import Gallery from '../components/Gallery'
 import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout'
 import SEO from '../components/SEO'
-import useSWR from 'swr'
-import { useEffect } from 'react'
 
 const HomePage = () => {
 
-  const fetcher = url => fetch(url).then((res) => res.json())
+  // const fetcher = url => fetch(url).then((res) => res.json())
   const years = ['2022', '2020', '2019']
 
-  const {data_2022, error } = useSWR('/api/images/2022', fetcher)
+  // const {data_2022, error } = useSWR('/api/images/2022', fetcher)
 
   // years.forEach((year) => {
   //   const { res, error } = useSWR(`/api/images/${year}`, fetcher)
@@ -18,9 +16,6 @@ const HomePage = () => {
 
   return (
     <DefaultWrapperLayout>
-      {
-        console.log(data)
-      }
       <SEO title="Anh's Photography" description="My Photo Reels"></SEO>
       <div className="flex flex-wrap justify-center space-x-4 overflow-x-hidden">
         <div className="group relative my-4">
@@ -42,7 +37,11 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <Gallery data={data} year={2022}></Gallery>
+      {
+        years.map((year, idx) => 
+          <Gallery key={idx} url={'/api/images/'+year} year={year}></Gallery>
+        )
+      }
     </DefaultWrapperLayout>
   )
 }

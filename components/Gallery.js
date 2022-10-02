@@ -1,4 +1,10 @@
-export default function Gallery({data, year}) {
+import useSWR from "swr"
+
+export default function Gallery({url, year}) {
+
+  const fetcher = url => fetch(url).then((res) => res.json())
+
+  const { data, error } = useSWR(url, fetcher)
 
   return (
     <div className='p-4'>
