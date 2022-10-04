@@ -55,7 +55,7 @@ export default async (req, res) => {
 
   const data = response.props.images.resources.map((image) => {
     return {
-      url: image.secure_url,
+      url: (image.secure_url.substring(0, 45) + "/w_500,c_scale/" + image.secure_url.substring(45)),
       public_id: image.public_id,
       folder: image.folder,
       width: image.width,
