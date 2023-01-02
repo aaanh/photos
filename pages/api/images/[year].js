@@ -40,8 +40,6 @@ export const getStaticProps = async (ctx) => {
   const res = await getManifest(year)
   const images = await res.json()
 
-  
-
   return {
     props: {
       images
@@ -53,9 +51,9 @@ export default async (req, res) => {
 
   const response = await getStaticProps(req.query.year)
 
-  const data = response.props.images.resources.map((image) => {
+  const data = response.props.images.resources?.map((image) => {
     return {
-      url: (image.secure_url.substring(0, 45) + "/w_500,c_scale/" + image.secure_url.substring(45)),
+      url: (image.secure_url.substring(0, 45) + "/w_500,c_scale" + image.secure_url.substring(45)),
       public_id: image.public_id,
       folder: image.folder,
       width: image.width,
