@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <DefaultWrapperLayout>
       <SEO title="Anh's Photography" description="My Photo Reels"></SEO>
-      <div className="flex flex-wrap justify-center space-x-4 overflow-x-hidden">
+      {/* <div className="flex flex-wrap justify-center space-x-4 overflow-x-hidden">
         <div className="group relative my-4">
           <img src='/splash.jpg' alt="splash" className="z-0 w-64 rounded-xl"></img>
           <div className="absolute bottom-0 left-0 z-10 p-2 text-transparent transition-all duration-200 ease-in-out group-hover:bg-neutral-900 group-hover:text-white">
@@ -36,9 +36,9 @@ const HomePage = () => {
             surroundings.
           </p>
         </div>
-      </div>
+      </div> */}
       {
-        years.map((year, idx) => 
+        years.map((year, idx) =>
           <Gallery key={idx} url={'/api/images/'+year} year={year}></Gallery>
         )
       }
