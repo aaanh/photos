@@ -1,11 +1,10 @@
-import Gallery from '../components/Gallery'
-import DefaultWrapperLayout from '../layouts/DefaultWrapperLayout'
-import SEO from '../components/SEO'
+import Gallery from "../components/Gallery";
+import DefaultWrapperLayout from "../layouts/DefaultWrapperLayout";
+import SEO from "../components/SEO";
 
 const HomePage = () => {
-
   // const fetcher = url => fetch(url).then((res) => res.json())
-  const years = ['2022', '2020', '2019']
+  const years = ["2023", "2022", "2020", "2019"];
 
   // const {data_2022, error } = useSWR('/api/images/2022', fetcher)
 
@@ -37,13 +36,11 @@ const HomePage = () => {
           </p>
         </div>
       </div> */}
-      {
-        years.map((year, idx) =>
-          <Gallery key={idx} url={'/api/images/'+year} year={year}></Gallery>
-        )
-      }
+      {years.map((year, idx) => (
+        <Gallery key={idx} url={"/api/images/" + year} year={year}></Gallery>
+      ))}
     </DefaultWrapperLayout>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
