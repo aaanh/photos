@@ -55,7 +55,7 @@ const response = async (req, res) => {
     return {
       url:
         image.secure_url.substring(0, 45) +
-        "/w_500,c_scale" +
+        "/w_800,c_scale" +
         image.secure_url.substring(45),
       public_id: image.public_id,
       folder: image.folder,
