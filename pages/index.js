@@ -15,7 +15,10 @@ const HomePage = () => {
 
   return (
     <DefaultWrapperLayout>
-      <SEO title="Anh's Photography" description="My Photo Reels"></SEO>
+      <SEO
+        title="Anh's Photography"
+        description="Latest update: 2023/07/17 - My Photo Reels"
+      ></SEO>
       {/* <div className="flex flex-wrap justify-center space-x-4 overflow-x-hidden">
         <div className="group relative my-4">
           <img src='/splash.jpg' alt="splash" className="z-0 w-64 rounded-xl"></img>
