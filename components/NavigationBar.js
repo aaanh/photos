@@ -12,29 +12,31 @@ const NavigationBar = () => {
           key={4}
           src={"/logo-color-variant.png"}
           alt=""
-          width={48}
-          height={48}
+          width={30}
+          height={30}
           className=""
         ></Image>
         <h1 className="text-2xl">AAANH</h1>
       </div>
-      <div className="flex justify-center bg-neutral-900 px-2 py-2 sm:py-0 text-white transition-all duration-200 ease-in-out hover:bg-white hover:text-black">
-        <h1 className="text-sm sm:text-xl font-bold flex justify-center items-center p-1">
-          <Link href="/">Photography Reels</Link>
-        </h1>
-      </div>
-      <div className="flex justify-center">
-        <ul className="flex justify-center space-x-2">
-          <li className={button_style}>
-            <Link href="/contact">Contact</Link>
-          </li>
-          <li className={button_style}>
-            <Link href="/about">About</Link>
-          </li>
-          <li className={button_style}>
-            <Link href="https://aaanh.ca">Homepage</Link>
-          </li>
-        </ul>
+      <div>
+        <div className="flex justify-center bg-neutral-900 px-2 py-2 sm:py-0 text-white transition-all duration-200 ease-in-out hover:bg-white hover:text-black">
+          <h1 className="text-sm sm:text-xl font-bold flex justify-center items-center p-1">
+            <Link href="/">Photography Reel</Link>
+          </h1>
+        </div>
+        <div className="flex justify-center">
+          <ul className="flex justify-center space-x-2">
+            <li className={button_style}>
+              <Link href="/about">About</Link>
+            </li>
+            <li className={button_style}>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li className={button_style}>
+              <Link href="https://aaanh.ca">Homepage</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

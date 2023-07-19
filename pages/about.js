@@ -30,9 +30,9 @@ const AboutPage = () => {
           </ul>
           <h2 className="text-2xl">Gears</h2>
           <ul className="font-mono">
-            <li>A Cam: Nikon D700</li>
-            <li>B Cam: Nikon D7000</li>
-            <li>C Cam: Sony ZV-E10</li>
+            <li>A Cam: Sony ZV-E10</li>
+            <li>B Cam: Sony A7 II</li>
+            <li>C Cam: Nikon D700</li>
             <li>Lenses:</li>
             <ul>
               <li>Sigma Art 24-70mm f/2.8 DG DN for Sony</li>
