@@ -36,8 +36,9 @@ const AboutPage = () => {
             <li>Lenses:</li>
             <ul>
               <li>Sigma Art 24-70mm f/2.8 DG DN for Sony</li>
+              <li>Sigma Art 30mm f/2.8 DN for Sony</li>
+              <li>Sony 16-60mm f/3.5-5.6 OSS</li>
               <li>Nikkor 50mm f/1.8</li>
-              <li>Nikkor 35mm f/1.8</li>
               <li>Nikkor 24-85mm f/3.5-4.5 VR</li>
               <li>Nikkor 70-300mm f/4.5-5.6</li>
               <li>Nikkor 28-70mm f/2.8 ED</li>
