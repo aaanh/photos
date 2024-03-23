@@ -22,7 +22,7 @@ export const getManifest = async (year) => {
 };
 
 export const getStaticPaths = async () => {
-  const years_to_query = ["2023", "2022", "2020", "2019"];
+  const years_to_query = ["2024", "2023", "2022", "2020", "2019"];
   const paths = years_to_query.map((year) => {
     return {
       params: { year: year.toString() }
