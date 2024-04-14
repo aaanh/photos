@@ -25,7 +25,7 @@ export default function Heading() {
             height="36"
             alt="Logo"
           ></Image>
-          <h1>Anh&apos;s Photography</h1>
+          <h1 className="text-3xl">Anh&apos;s Photography</h1>
         </Link>
         <nav>
           <ul className="flex space-x-2">

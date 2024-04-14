@@ -40,13 +40,7 @@ export function ModeToggle() {
         onCheckedChange={(isDark: boolean) => {
           handleModeToggle(isDark);
         }}
-        checked={
-          typeof window !== "undefined"
-            ? localStorage.getItem("theme") === "dark"
-              ? true
-              : false
-            : false
-        }
+        checked={checked}
         name="dark-mode"
         id="dark-mode"
       ></Switch>
