@@ -6,12 +6,12 @@ import { useState } from "react";
 export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
   const ratio = photo.height / photo.width;
   const galleryHeight = Math.ceil(300 * ratio);
-  const photoSpans = Math.ceil(galleryHeight / 10) + 1;
+  const photoSpans = Math.ceil(galleryHeight / 10);
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <div
-      className={`w-[300px] justify-self-center m-2`}
+      className={`w-[300px] justify-self-center p-2`}
       style={{
         height: galleryHeight,
         gridRow: `span ${photoSpans}`
@@ -20,7 +20,7 @@ export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
       <Dialog>
         <DialogTrigger asChild>
           <button>
-            <div className={`rounded-xl overflow-hidden group`}>
+            <div className={`rounded-lg overflow-hidden group`}>
               {isLoading ? (
                 <Image
                   width={300}

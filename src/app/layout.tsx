@@ -38,8 +38,8 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system">
           <Heading></Heading>
-          <div className="flex items-center justify-center space-x-2">
-            Jump to: &nbsp;
+          <div className="flex items-center justify-center space-x-2 p-4 flex-wrap">
+            <span>Go to:&nbsp;</span>
             {years.map((year, idx) => (
               <Link
                 className={cn(

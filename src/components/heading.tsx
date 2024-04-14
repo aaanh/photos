@@ -32,7 +32,7 @@ export default function Heading() {
             <li>
               <Link
                 className={cn(
-                  buttonVariants({ variant: "outline" }),
+                  buttonVariants({ variant: "outline", size: "sm" }),
                   "flex items-center justify-center space-x-2"
                 )}
                 href={"/"}
@@ -43,7 +43,7 @@ export default function Heading() {
             <li>
               <Link
                 className={cn(
-                  buttonVariants({ variant: "outline" }),
+                  buttonVariants({ variant: "outline", size: "sm" }),
                   "flex items-center justify-center space-x-2"
                 )}
                 href={"/about"}
@@ -54,7 +54,7 @@ export default function Heading() {
             <li>
               <a
                 className={cn(
-                  buttonVariants({ variant: "outline" }),
+                  buttonVariants({ variant: "outline", size: "sm" }),
                   "flex items-center justify-center space-x-2"
                 )}
                 href={"https://aaanh.com"}
