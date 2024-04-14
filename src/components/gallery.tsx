@@ -21,7 +21,7 @@ export default function Gallery({ year }: { year: string }) {
       <div className="my-4 font-mono sticky lg:top-0 top-[10.45rem] transition-all ease-in-out duration-200 bg-background/50 backdrop-blur-2xl w-screen lg:w-full lg:bg-transparent lg:backdrop-blur-0 flex items-center justify-center lg:justify-start">
         <h2
           id={`year-${year}`}
-          className="text-primary m-4 mx-2 px-4 bg-green-200/80 rounded-lg w-fit"
+          className="text-background m-4 mx-2 px-4 bg-primary rounded-lg w-fit"
         >
           Year::{year}
         </h2>
