@@ -8,6 +8,16 @@ export default function AboutPage() {
           <li>Built with NextJS</li>
           <li>Asset storage with Cloudinary</li>
           <li>Custom Database and API query</li>
+          <li>
+            Other works:{" "}
+            <ul>
+              <li>
+                <a href="https://gcesconcordia.com/meet-the-team">
+                  GCES Concordia (2023-2025)
+                </a>
+              </li>
+            </ul>
+          </li>
           <li>Hosted on Vercel</li>
           <li>DNS and CDN with Cloudflare</li>
           <li>
