@@ -1,3 +1,5 @@
+"use client"
+
 import { FetchedImage } from "@/lib/image";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";

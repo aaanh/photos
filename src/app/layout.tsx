@@ -1,61 +1,23 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Heading from "@/components/heading";
-import { cn } from "@/lib/utils";
-import { years } from "@/lib/years";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
+import { ThemeProvider } from '@/components/theme-provider';
+import { cn } from '@/lib/utils';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { ReactNode } from 'react';
 
-const inter = Inter({ subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-export const metadata: Metadata = {
-  title: "Anh's Photography",
-  description: "Select pictures I have taken over the years."
-};
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        ></link>
-      </head>
-      <body
-        className={cn(
-          inter.className,
-          "flex flex-col items-center justify-center"
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system">
-          <Heading></Heading>
-          <div className="flex items-center justify-center space-x-2 p-4 flex-wrap">
-            <span>Go to:&nbsp;</span>
-            {years.map((year, idx) => (
-              <Link
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "sm" }),
-                  "flex items-center justify-center space-x-2"
-                )}
-                key={idx}
-                href={`#year-${year}`}
-              >
-                {year}
-              </Link>
-            ))}
-          </div>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <>
+      {children}
+    </>
+
   );
 }
