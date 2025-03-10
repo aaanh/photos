@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:pull": "dotenvx run -f .env.local -- npx drizzle-kit pull",
+    "db:push": "dotenvx run -f .env.local -- npx drizzle-kit push",
+    "db:migrate": "dotenvx run -f .env.local -- npx drizzle-kit migrate",
+    "db:migrate-users": "dotenvx run -f .env.local -- tsx src/db/migrate-users.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",

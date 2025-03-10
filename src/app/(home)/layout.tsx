@@ -12,37 +12,33 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anh's Photography",
-  description: "Select pictures I have taken over the years."
+  description: "Select pictures I have taken over the years.",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem
-        disableTransitionOnChange>
-        <Heading></Heading>
-        <div className="flex items-center justify-center space-x-2 p-4 flex-wrap">
-          <span>Go to:&nbsp;</span>
-          {years.map((year, idx) => (
-            <Link
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "sm" }),
-                "flex items-center justify-center space-x-2"
-              )}
-              key={idx}
-              href={`#year-${year}`}
-            >
-              {year}
-            </Link>
-          ))}
-        </div>
-        {children}
-      </ThemeProvider>
+      <Heading></Heading>
+      <div className="flex flex-wrap justify-center items-center space-x-2 p-4">
+        <span>Go to:&nbsp;</span>
+        {years.map((year, idx) => (
+          <Link
+            className={cn(
+              buttonVariants({ variant: "ghost", size: "sm" }),
+              "flex items-center justify-center space-x-2"
+            )}
+            key={idx}
+            href={`#year-${year}`}
+          >
+            {year}
+          </Link>
+        ))}
+      </div>
+      {children}
     </>
-
   );
 }
