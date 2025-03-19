@@ -1,6 +1,6 @@
 import { db } from "."; // Assuming db is your Drizzle ORM instance
-import { users } from "../../drizzle/schema"; // Import users directly
-import { accounts } from "../../drizzle/schema"; // Assuming the public.accounts table schema
+import { users } from "../../drizzle/supabaseSchema"; // Import users directly
+import { appUsers as accounts } from "../../drizzle/schema"; // Assuming the public.accounts table schema
 import { InferSelectModel } from "drizzle-orm";
 
 async function migrateUsersToAccounts() {

@@ -1,25 +1,48 @@
 import { db } from "@/db";
-import { admins, users } from "../../drizzle/schema";
+import { admins, appUsers, users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { createClient } from "@supabase/supabase-js";
-import { env as envServer } from "@/env/server";
-import { env as envClient } from "@/env/client";
+import { User } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  envClient.NEXT_PUBLIC_SUPABASE_URL,
-  envServer.SUPABASE_SERVICE_KEY
-);
+export class UserService {
+  private static instance: UserService;
+  private constructor() {}
 
-export async function getUserByEmail(email: string) {
-  return db.select().from(users).where(eq(users.id, email)).execute();
+  public static getInstance(): UserService {
+    if (!UserService.instance) {
+      UserService.instance = new UserService();
+    }
+    return UserService.instance;
+  }
+
+  async getUserByEmail(email: string) {
+    return db.select().from(users).where(eq(users.id, email)).execute();
+  }
+
+  async isAdmin(id: string) {
+    const user = await db
+      .select()
+      .from(admins)
+      .where(eq(admins.id, id))
+      .execute();
+
+    return user.length > 0;
+  }
+
+  async getAllUsers() {
+    return db.select().from(appUsers).execute();
+  }
+
+  async getUserFromSupabase(user: User) {
+    const res = await db
+      .select()
+      .from(appUsers)
+      .where(eq(users.id, user.id))
+      .limit(1)
+      .execute();
+
+    return res[0];
+  }
 }
 
-export async function isAdmin(id: string) {
-  const user = await db
-    .select()
-    .from(admins)
-    .where(eq(admins.id, id))
-    .execute();
-
-  return user.length > 0;
-}
+// Export a singleton instance
+export const accountService = UserService.getInstance();

@@ -9,8 +9,10 @@
     "lint": "next lint",
     "db:pull": "dotenvx run -f .env.local -- npx drizzle-kit pull",
     "db:push": "dotenvx run -f .env.local -- npx drizzle-kit push",
+    "db:migrate-gen": "dotenvx run -f .env.local -- npx drizzle-kit generate",
     "db:migrate": "dotenvx run -f .env.local -- npx drizzle-kit migrate",
-    "db:migrate-users": "dotenvx run -f .env.local -- tsx src/db/migrate-users.ts"
+    "db:migrate-users": "dotenvx run -f .env.local -- tsx src/db/migrate-users.ts",
+    "db:reset": "dotenvx run -f .env.local -- npx drizzle-kit reset"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",

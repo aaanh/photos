@@ -1,8 +1,6 @@
-import { updateSession } from "@/utils/supabase/middleware";
 import { createClient } from "@/utils/supabase/server";
-import { SupabaseClient } from "@supabase/supabase-js";
-import { isAdmin } from "@/backend/user-service";
 import { redirect } from "next/navigation";
+import { getAllAccounts, isAdmin } from "./actions";
 
 export default async function Page() {
   const supabase = await createClient();
@@ -20,12 +18,16 @@ export default async function Page() {
     redirect("/");
   }
 
+  const accounts = await getAllAccounts();
+
   return (
-    <div>
-      <p>Admin Dashboard</p>
-      <pre>
-        <code>{JSON.stringify(user, null, " ")}</code>
-      </pre>
+    <div className="mx-auto p-4 container">
+      <h1>Administrator Dashboard</h1>
+      <div className="gap-4 grid">
+        <pre>
+          <code>{JSON.stringify(accounts, null, " ")}</code>
+        </pre>
+      </div>
     </div>
   );
 }
