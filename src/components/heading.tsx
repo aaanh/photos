@@ -27,7 +27,7 @@ export default function Heading() {
           <h1 className="text-xl">Anh&apos;s Photography</h1>
         </Link>
         <nav>
-          <ul className="flex space-x-2 flex-wrap items-center justify-center">
+          <ul className="flex flex-wrap justify-center items-center space-x-2">
             <li>
               <Link
                 className={cn(
@@ -64,8 +64,8 @@ export default function Heading() {
             <li>
               <Link
                 className={cn(
-                  buttonVariants({ variant: "default", size: "sm" }),
-                  "flex items-center justify-center space-x-2"
+                  buttonVariants({ variant: "outline", size: "sm" }),
+                  "flex items-center justify-center space-x-2 hover:cursor-not-allowed pointer-events-none text-foreground/20"
                 )}
                 href="/login"
               >
