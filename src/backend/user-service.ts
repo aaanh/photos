@@ -1,5 +1,6 @@
 import { db } from "@/db";
-import { admins, appUsers, users } from "../../drizzle/schema";
+import { admins, appUsers } from "../../drizzle/schema";
+import { users } from "../../drizzle/supabaseSchema";
 import { eq } from "drizzle-orm";
 import { User } from "@supabase/supabase-js";
 
