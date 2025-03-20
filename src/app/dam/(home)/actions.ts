@@ -1,4 +1,3 @@
-import { cookies } from "next/headers";
 import { sessionService } from "@/backend/session-service";
 import { createClient } from "@/utils/supabase/server";
 import { UserService } from "@/backend/user-service";

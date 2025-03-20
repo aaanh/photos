@@ -37,7 +37,7 @@ export class UserService {
     const res = await db
       .select()
       .from(appUsers)
-      .where(eq(users.id, user.id))
+      .where(eq(appUsers.id, user.id))
       .limit(1)
       .execute();
 

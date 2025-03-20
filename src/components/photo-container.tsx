@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FetchedImage } from "@/lib/image";
 import Image from "next/image";
@@ -16,7 +16,7 @@ export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
       className={`w-[300px] justify-self-center p-2`}
       style={{
         height: galleryHeight,
-        gridRow: `span ${photoSpans}`
+        gridRow: `span ${photoSpans}`,
       }}
     >
       <Dialog>
@@ -29,7 +29,7 @@ export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
                   height={300}
                   alt={photo.public_id}
                   src="/static/icon-small.png"
-                  className="z-50 animate-spin opacity-50 blur-2xl"
+                  className="z-50 opacity-50 blur-2xl animate-spin"
                   priority
                 ></Image>
               ) : null}
@@ -45,7 +45,7 @@ export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
             </div>
           </button>
         </DialogTrigger>
-        <DialogContent className="flex items-center justify-center">
+        <DialogContent className="flex justify-center items-center">
           <div
             className={`rounded-xl overflow-hidden h-[80vh] w-full relative`}
           >

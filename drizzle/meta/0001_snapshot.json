@@ -1,6 +1,6 @@
 {
-  "id": "27856c82-15b3-452f-9422-d3687bc4a00d",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "8634521a-7de3-493c-a060-cd23a56c5558",
+  "prevId": "27856c82-15b3-452f-9422-d3687bc4a00d",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -102,8 +102,20 @@
           "primaryKey": false,
           "notNull": true
         },
-        "cloudinary_id": {
-          "name": "cloudinary_id",
+        "s3_key": {
+          "name": "s3_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "s3_bucket": {
+          "name": "s3_bucket",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "s3_region": {
+          "name": "s3_region",
           "type": "text",
           "primaryKey": false,
           "notNull": true
