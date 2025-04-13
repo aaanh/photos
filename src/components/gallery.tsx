@@ -7,15 +7,15 @@ export default async function Gallery({ year }: { year: string }) {
 
   return (
     <section className="flex flex-col rounded-lg">
-      <div className="font-mono sticky top-0 transition-all ease-in-out duration-200 bg-background/50 backdrop-blur-2xl bg-transparent backdrop-blur-0 flex items-center justify-center justify-start w-fit">
+      <div className="top-22 md:top-0 sticky flex justify-start items-center w-fit font-mono transition-all duration-200 ease-in-out">
         <h3
           id={`year-${year}`}
-          className="text-background m-2 px-4 bg-primary rounded-lg w-fit"
+          className="bg-primary m-2 px-4 rounded-lg w-fit text-background"
         >
           Year::{year}
         </h3>
       </div>
-      <div className="grid lg:grid-cols-3 grid-cols-[75vw] auto-rows-[10px]">
+      <div className="grid grid-cols-[75vw] lg:grid-cols-3 auto-rows-[10px]">
         {images.map((img: FetchedImage) => (
           <PhotoContainer key={img.public_id} photo={img} />
         ))}

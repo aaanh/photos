@@ -61,17 +61,6 @@ export default function Heading() {
                 aaanh.com
               </a>
             </li>
-            <li>
-              <Link
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "sm" }),
-                  "flex items-center justify-center space-x-2 hover:cursor-not-allowed pointer-events-none text-foreground/20"
-                )}
-                href="/login"
-              >
-                Login
-              </Link>
-            </li>
             <li className="flex justify-center items-center m-2">
               <ModeToggle></ModeToggle>
             </li>
