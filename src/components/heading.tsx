@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Heading() {
   return (
     <div
-      className={`pb-2 px-4 lg:pt-2 flex flex-col justify-center items-center space-y-2 lg:space-y-0 w-full sticky top-0 bg-background/80 backdrop-blur-2xl`}
+      className={`pb-2 px-4 lg:pt-2 flex flex-col justify-center items-center space-y-2 lg:space-y-0 w-full sticky top-0 bg-background/80 backdrop-blur-2xl z-30`}
     >
       <div className=""></div>
       <div className="flex flex-col justify-center items-center">
