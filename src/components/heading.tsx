@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button, buttonVariants } from "./ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "@/components/lib/utils";
 import { ModeToggle } from "./darkmode-toggle";
 import Image from "next/image";
 

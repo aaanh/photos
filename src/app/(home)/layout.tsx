@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import Heading from "@/components/heading";
-import { cn } from "@/lib/utils";
+import { cn } from "@/components/lib/utils";
 import { years } from "@/lib/years";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";

@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
+import { cn } from "@/components/lib/utils";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ReactNode } from "react";
 
