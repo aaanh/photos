@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { years } from "@/lib/years";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { FloatingFooter } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Anh's Photography",
@@ -25,7 +26,7 @@ export default function RootLayout({
           <Link
             className={cn(
               buttonVariants({ variant: "ghost", size: "sm" }),
-              "flex items-center justify-center space-x-2"
+              "flex items-center justify-center space-x-2",
             )}
             key={idx}
             href={`#year-${year}`}
@@ -35,6 +36,7 @@ export default function RootLayout({
         ))}
       </div>
       {children}
+      <FloatingFooter />
     </>
   );
 }

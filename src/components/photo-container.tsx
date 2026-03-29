@@ -2,7 +2,7 @@
 
 import { FetchedImage } from "@/lib/image";
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { useState } from "react";
 
 export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
@@ -37,18 +37,17 @@ export default function PhotoContainer({ photo }: { photo: FetchedImage }) {
               <Image
                 src={photo.url}
                 alt={photo.public_id}
-                width={300}
+                width={500}
                 height={galleryHeight}
                 onLoad={() => setIsLoading(false)}
-                sizes="300px"
+                sizes="500px"
               ></Image>
             </div>
           </button>
         </DialogTrigger>
-        <DialogContent className="flex justify-center items-center">
-          <div
-            className={`rounded-xl overflow-hidden h-[80vh] w-full relative`}
-          >
+        <DialogContent className="flex justify-center items-center w-[95vw] rounded-lg">
+          <div className={`overflow-hidden h-[90vh] w-full relative`}>
+            <DialogTitle />
             <Image
               src={photo.url}
               alt={photo.public_id}
